@@ -1,4 +1,3 @@
 {
-    "python.pythonPath": "/anaconda2/envs/Python36/bin/python",
-    "python.linting.pylintEnabled": false
+    "python.pythonPath": "/Users/deviljinx/anaconda3/envs/tf/bin/python"
 }
