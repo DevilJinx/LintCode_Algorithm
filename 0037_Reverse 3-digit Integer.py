@@ -21,3 +21,4 @@ class Solution:
         ten = int(number % 100 / 10)
         hun = int(number / 100)
         return (unit * 100 + ten * 10 + hun)
+    
