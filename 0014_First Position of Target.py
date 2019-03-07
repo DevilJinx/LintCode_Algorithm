@@ -28,15 +28,15 @@ class Solution:
     """
     def binarySearch(self, nums, target):
         # write your code here
-        left, right = 0, len(nums)
-        while left + 1 < right :
-            mid = (left + right) // 2
-            if nums[mid] < target :
+        left, right = 0, len(nums) - 1
+        while left + 1 < right:
+            mid = left + (right - left) // 2
+            if nums[mid] < target:
                 left = mid
-            else :
+            else:
                 right = mid
-        if nums[left] == target :
+        if nums[left] == target:
             return left
-        elif nums[right] == target :
+        elif nums[right] == target:
             return right
         return -1
