@@ -12,9 +12,6 @@
 挑战：使用O(1)的额外空间和O(n)时间复杂度
 '''
 
-'''
-Python，排序便是...
-'''
 class Solution:
     """
     @param nums: An integer array
@@ -22,4 +19,17 @@ class Solution:
     """
     def recoverRotatedSortedArray(self, nums):
         # write your code here
-        nums.sort()
+        n = len(nums)
+        for i in range(n):
+            if nums[0] >= nums[-1]:
+                temp = nums[0]
+                nums.remove(nums[0])
+                nums.append(temp)
+            else:
+                return
+
+'''
+1、不建立新数组，在原数组上操作
+2、只循环依次数组
+依次获取数组第一个和最后一个元素比较，若[0]>[-1]，则移除[0]并追加到数组末尾直到[0]<[-1]
+'''
